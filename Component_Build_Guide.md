@@ -51,6 +51,7 @@
 | **Pega_Extensions_StarRatingInput**         | Input for star‑based ratings.                                      | [Docs](./src/components/Pega_Extensions_StarRatingInput/Docs.mdx)         |
 | **Pega_Extensions_StatusBadge**             | Badge showing status with color coding.                            | [Docs](./src/components/Pega_Extensions_StatusBadge/Docs.mdx)             |
 | **Pega_Extensions_TaskList**                | Displays a list of tasks with actions.                             | [Docs](./src/components/Pega_Extensions_TaskList/Docs.mdx)                |
+| **Pega_Extensions_Tooltip**                 | Display contextual information on hover or focus.                  | [Docs](./src/components/Pega_Extensions_Tooltip/Docs.mdx)                 |
 | **Pega_Extensions_TrendDisplay**            | Shows trends over time (charts, graphs).                           | [Docs](./src/components/Pega_Extensions_TrendDisplay/Docs.mdx)            |
 | **Pega_Extensions_UtilityList**             | Generic list component for utilities.                              | [Docs](./src/components/Pega_Extensions_UtilityList/Docs.mdx)             |
 | **shared**                                  | Shared utilities and hooks used by multiple components.            | N/A                                                                       |
