@@ -1,0 +1,98 @@
+import { Meta, Primary, Controls, Story } from '@storybook/addon-docs/blocks';
+import * as DemoStories from './demo.stories';
+
+<Meta of={DemoStories} />
+
+# Select Bar
+
+The **Select Bar** component provides a horizontal bar of selectable options, ideal for choosing one option from a limited set of choices. It's similar to a segmented control or button group, offering a visual and intuitive way to make selections.
+
+## Features
+
+- **Single Selection**: Users can select one option at a time from the horizontal bar
+- **Visual Feedback**: Selected option is highlighted with primary styling
+- **Flexible Options**: Configure options via data source or static list
+- **Read-Only Mode**: Display the selected value without allowing changes
+- **Disabled State**: Prevent interactions when needed
+- **Helper Text**: Provide additional context or instructions
+- **Validation Support**: Display error messages when validation fails
+
+## Use Cases
+
+- **Priority Selection**: Choose priority levels (Low, Medium, High, Critical)
+- **Status Selection**: Select status values (Active, Inactive, Pending)
+- **Category Selection**: Pick from a limited set of categories
+- **Quick Filters**: Apply filters in dashboards or lists
+- **Settings Toggle**: Switch between different view modes or settings
+
+## Props
+
+<Controls />
+
+## Examples
+
+### Default Select Bar
+
+A basic select bar with three options and a pre-selected value.
+
+<Story of={DemoStories.Default} />
+
+### With Many Options
+
+A select bar with multiple options, useful for priority or category selection.
+
+<Story of={DemoStories.WithManyOptions} />
+
+### Read-Only Mode
+
+Display the selected value without allowing changes.
+
+<Story of={DemoStories.ReadOnly} />
+
+### Disabled State
+
+A disabled select bar that prevents user interaction.
+
+<Story of={DemoStories.Disabled} />
+
+## Configuration
+
+### Options Format
+
+Options should be provided as an array of objects with `key` and `value` properties:
+
+```json
+[
+  { "key": "option1", "value": "Option 1" },
+  { "key": "option2", "value": "Option 2" },
+  { "key": "option3", "value": "Option 3" }
+]
+```
+
+### Data Binding
+
+The component automatically syncs with Pega's data layer:
+- **Value**: The selected option's key
+- **Updates**: Automatically triggers field value updates and change events
+- **Validation**: Supports Pega's validation framework
+
+## Best Practices
+
+1. **Limit Options**: Use 2-7 options for optimal usability. Too many options make the bar crowded.
+2. **Clear Labels**: Use concise, descriptive labels for each option.
+3. **Default Selection**: Pre-select a sensible default when possible.
+4. **Helper Text**: Provide context when the purpose isn't immediately clear.
+5. **Responsive Design**: Consider how the bar will display on mobile devices.
+
+## Accessibility
+
+- Buttons are keyboard accessible (Tab to navigate, Enter/Space to select)
+- ARIA labels are automatically applied
+- Visual indicators clearly show the selected state
+- Works with screen readers
+
+## Related Components
+
+- **Radio Button Group**: For vertical layouts or more options
+- **Dropdown**: For many options where space is limited
+- **Tabs**: For switching between different content sections

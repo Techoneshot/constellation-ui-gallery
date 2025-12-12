@@ -46,6 +46,7 @@
 | **Pega_Extensions_RatingLayout**            | Star or numeric rating component.                                  | [Docs](./src/components/Pega_Extensions_RatingLayout/Docs.mdx)            |
 | **Pega_Extensions_Scheduler**               | Scheduling UI for events and appointments.                         | [Docs](./src/components/Pega_Extensions_Scheduler/Docs.mdx)               |
 | **Pega_Extensions_SecureRichText**          | Rich‑text editor with security controls.                           | [Docs](./src/components/Pega_Extensions_SecureRichText/Docs.mdx)          |
+| **Pega_Extensions_SelectBar**               | A horizontal bar with multiple selectable options.                 | [Docs](./src/components/Pega_Extensions_SelectBar/Docs.mdx)               |
 | **Pega_Extensions_Shortcuts**               | Provides keyboard shortcuts for quick actions.                     | [Docs](./src/components/Pega_Extensions_Shortcuts/Docs.mdx)               |
 | **Pega_Extensions_SignatureCapture**        | Capture user signatures via touch or mouse.                        | [Docs](./src/components/Pega_Extensions_SignatureCapture/Docs.mdx)        |
 | **Pega_Extensions_StarRatingInput**         | Input for star‑based ratings.                                      | [Docs](./src/components/Pega_Extensions_StarRatingInput/Docs.mdx)         |
