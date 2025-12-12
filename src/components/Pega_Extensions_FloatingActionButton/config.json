@@ -1,0 +1,82 @@
+{
+    "name": "Pega_Extensions_FloatingActionButton",
+    "label": "Floating Action Button",
+    "description": "A floating action button that displays a menu with actionable items",
+    "organization": "Pega",
+    "version": "4.0.1",
+    "library": "Extensions",
+    "allowedApplications": [],
+    "componentKey": "Pega_Extensions_FloatingActionButton",
+    "type": "Field",
+    "subtype": "Text",
+    "properties": [
+        {
+            "name": "label",
+            "label": "Button label",
+            "format": "TEXT",
+            "required": true
+        },
+        {
+            "name": "icon",
+            "label": "Icon name",
+            "format": "TEXT",
+            "defaultValue": "plus"
+        },
+        {
+            "name": "position",
+            "label": "Position",
+            "format": "SELECT",
+            "defaultValue": "bottom-right",
+            "source": [
+                {
+                    "key": "bottom-right",
+                    "value": "Bottom Right"
+                },
+                {
+                    "key": "bottom-left",
+                    "value": "Bottom Left"
+                },
+                {
+                    "key": "top-right",
+                    "value": "Top Right"
+                },
+                {
+                    "key": "top-left",
+                    "value": "Top Left"
+                }
+            ]
+        },
+        {
+            "name": "menuItems",
+            "label": "Menu Items",
+            "format": "JSONARRAY",
+            "required": true
+        },
+        {
+            "name": "visibility",
+            "label": "Visible",
+            "format": "VISIBILITY"
+        },
+        {
+            "format": "LABEL",
+            "label": "About",
+            "name": "PegaAboutLabel",
+            "variant": "h3"
+        },
+        {
+            "format": "LABEL",
+            "label": "Pega_Extensions 4.0.1, Tue Dec 02 2025, 25.1.1-199",
+            "name": "PegaAboutData",
+            "variant": "primary"
+        }
+    ],
+    "defaultConfig": {
+        "label": "Actions",
+        "icon": "plus",
+        "position": "bottom-right",
+        "menuItems": []
+    },
+    "buildDate": "2025-12-12T09:33:55.833Z",
+    "infinityVersion": "25.1.1-199",
+    "packageCosmosVersion": "8.8.2"
+}

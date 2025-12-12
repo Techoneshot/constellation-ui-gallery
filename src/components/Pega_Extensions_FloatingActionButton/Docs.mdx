@@ -1,0 +1,90 @@
+import { Meta, Primary, Controls, Story } from '@storybook/addon-docs/blocks';
+import * as DemoStories from './demo.stories';
+
+<Meta of={DemoStories} />
+
+# Overview
+
+The Floating Action Button (FAB) component is a field-level component that provides a floating button with a menu of actions. When clicked, it displays a menu where each menu item can launch a local action, similar to the Actionable Button component.
+
+This component is designed to provide quick access to frequently used actions from anywhere in the UI. The button floats above the content and can be positioned in any corner of the screen.
+
+## Key Features
+
+- **Floating Positioning**: The button remains fixed on screen at a configurable position (bottom-right, bottom-left, top-right, or top-left)
+- **Menu Integration**: Clicking the button displays a menu with multiple action items
+- **Local Action Support**: Each menu item can trigger a local action, just like the Actionable Button
+- **Customizable Icon**: The button icon can be customized to match your use case
+- **Responsive Behavior**: The button scales and animates on hover and click for better user feedback
+
+## Usage Guidelines
+
+- Use the FAB for primary or frequently accessed actions that users need quick access to
+- Position the FAB where it won't interfere with other UI elements
+- Limit the number of menu items to keep the menu manageable (typically 3-6 items)
+- Use clear, action-oriented labels for menu items
+- This component should be used in read-only views, similar to the Actionable Button
+- The component will only work on Case types
+
+## Configuration
+
+To use this component:
+
+1. Add the component to your view
+2. Set the button label (used for accessibility)
+3. Choose an icon (defaults to 'plus')
+4. Select the button position (defaults to 'bottom-right')
+5. Configure the menu items as a JSON array, where each item has:
+   - `id`: Unique identifier for the menu item
+   - `label`: Display text for the menu item
+   - `localAction`: The local action ID to execute (e.g., 'pyEditDetails')
+   - `caseID` (optional): The case ID to use (defaults to the current case)
+
+## Example Configuration
+
+```json
+{
+  "label": "Actions",
+  "icon": "plus",
+  "position": "bottom-right",
+  "menuItems": [
+    {
+      "id": "edit",
+      "label": "Edit Details",
+      "localAction": "pyEditDetails"
+    },
+    {
+      "id": "note",
+      "label": "Add Note",
+      "localAction": "pyAddNote"
+    }
+  ]
+}
+```
+
+<Primary />
+
+## Props
+
+<Controls />
+
+# Examples
+
+## Default Position (Bottom Right)
+
+<Story of={DemoStories.Default} />
+
+## Bottom Left Position
+
+<Story of={DemoStories.BottomLeft} />
+
+## Custom Icon
+
+<Story of={DemoStories.WithCustomIcon} />
+
+## Notes
+
+- The FAB will not be visible if the menuItems array is empty
+- Local actions will always run in a modal dialog
+- The modal can contain a form or display read-only information
+- Like the Actionable Button, this component should NOT be put inside a form view
