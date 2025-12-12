@@ -1,0 +1,96 @@
+{
+  "name": "Pega_Extensions_Tooltip",
+  "label": "Tooltip",
+  "description": "Display contextual information in a tooltip on hover or focus",
+  "organization": "Pega",
+  "version": "4.0.0",
+  "library": "Extensions",
+  "allowedApplications": [],
+  "componentKey": "Pega_Extensions_Tooltip",
+  "type": "Field",
+  "subtype": "Text",
+  "icon": "images/pz-text-input-active.svg",
+  "properties": [
+    {
+      "name": "label",
+      "label": "Label",
+      "format": "TEXT",
+      "required": true
+    },
+    {
+      "name": "content",
+      "label": "Tooltip content",
+      "format": "TEXTAREA",
+      "required": true
+    },
+    {
+      "name": "position",
+      "label": "Tooltip position",
+      "format": "SELECT",
+      "defaultValue": "top",
+      "source": [
+        {
+          "key": "top",
+          "value": "Top"
+        },
+        {
+          "key": "bottom",
+          "value": "Bottom"
+        },
+        {
+          "key": "left",
+          "value": "Left"
+        },
+        {
+          "key": "right",
+          "value": "Right"
+        }
+      ]
+    },
+    {
+      "name": "delay",
+      "label": "Show delay (ms)",
+      "format": "TEXT",
+      "defaultValue": "300"
+    },
+    {
+      "name": "maxWidth",
+      "label": "Max width (px)",
+      "format": "TEXT",
+      "defaultValue": "300"
+    },
+    {
+      "label": "Conditions",
+      "format": "GROUP",
+      "properties": [
+        {
+          "name": "visibility",
+          "label": "Visibility",
+          "format": "VISIBILITY"
+        }
+      ]
+    },
+    {
+      "format": "LABEL",
+      "label": "About",
+      "name": "PegaAboutLabel",
+      "variant": "h3"
+    },
+    {
+      "format": "LABEL",
+      "label": "Pega_Extensions 4.0.0, Thu Dec 12 2025, 25.1.1-199",
+      "name": "PegaAboutData",
+      "variant": "primary"
+    }
+  ],
+  "defaultConfig": {
+    "label": "@L $this.label",
+    "content": "@L Tooltip content",
+    "position": "@L top",
+    "delay": "@L 300",
+    "maxWidth": "@L 300"
+  },
+  "buildDate": "2025-12-12T09:18:00.000Z",
+  "infinityVersion": "25.1.1-199",
+  "packageCosmosVersion": "8.9.4"
+}

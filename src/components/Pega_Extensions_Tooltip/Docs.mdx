@@ -1,0 +1,93 @@
+import { Meta, Story, Canvas, Controls } from '@storybook/blocks';
+import * as TooltipStories from './demo.stories';
+
+<Meta of={TooltipStories} />
+
+# Tooltip
+
+The Tooltip component displays contextual information when users hover over or focus on a trigger element. It's useful for providing additional help text, definitions, or explanations without cluttering the user interface.
+
+## Features
+
+- **Multiple Positions**: Display tooltip above, below, left, or right of the trigger
+- **Customizable Delay**: Control how quickly the tooltip appears
+- **Flexible Width**: Set maximum width to accommodate different content lengths
+- **Accessible**: Keyboard navigation and screen reader support
+- **Smooth Animations**: Fade in/out transitions for better user experience
+
+## Usage
+
+The Tooltip component wraps a trigger element (typically text) and displays additional content when the user interacts with it through hover or keyboard focus.
+
+### Basic Example
+
+<Canvas of={TooltipStories.Default} />
+
+## Properties
+
+<Controls of={TooltipStories.Default} />
+
+## Positioning
+
+The tooltip can be positioned in four directions relative to the trigger element:
+
+### Top (Default)
+
+<Canvas of={TooltipStories.Default} />
+
+### Bottom
+
+<Canvas of={TooltipStories.BottomPosition} />
+
+### Left
+
+<Canvas of={TooltipStories.LeftPosition} />
+
+### Right
+
+<Canvas of={TooltipStories.RightPosition} />
+
+## Content Handling
+
+The tooltip handles various content lengths gracefully:
+
+### Long Content
+
+<Canvas of={TooltipStories.LongContent} />
+
+### Custom Width
+
+<Canvas of={TooltipStories.CustomWidth} />
+
+## Interaction
+
+### Quick Show
+
+For immediate feedback, you can set the delay to 0:
+
+<Canvas of={TooltipStories.QuickShow} />
+
+## Best Practices
+
+- **Keep it concise**: Tooltips should provide brief, supplementary information
+- **Use appropriate positioning**: Choose a position that won't be cut off by the viewport
+- **Consider delay**: A short delay (300ms) prevents tooltips from appearing accidentally
+- **Make triggers obvious**: Use visual cues (like dotted underline) to indicate interactive elements
+- **Accessible content**: Ensure tooltip content is meaningful and helps users understand the interface
+
+## Accessibility
+
+The Tooltip component includes several accessibility features:
+
+- Keyboard focusable trigger element
+- `role="tooltip"` for screen reader identification
+- `aria-describedby` linking trigger to content
+- Keyboard navigation support (Tab to focus, Escape could dismiss in future versions)
+
+## Use Cases
+
+- **Field Help**: Provide additional context for form fields
+- **Icon Explanations**: Explain what icon buttons do
+- **Term Definitions**: Define technical terms or jargon
+- **Status Information**: Display detailed status information for badges or indicators
+- **Action Descriptions**: Describe what will happen when a user clicks a button
