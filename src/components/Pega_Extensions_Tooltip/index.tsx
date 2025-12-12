@@ -1,4 +1,4 @@
-import { withConfiguration } from '@pega/cosmos-react-core';
+import { withConfiguration, createUID } from '@pega/cosmos-react-core';
 import { useState, useRef, useEffect } from 'react';
 import { TooltipWrapper, TooltipTrigger, TooltipContent } from './styles';
 import '../shared/create-nonce';
@@ -28,6 +28,7 @@ export const PegaExtensionsTooltip = (props: TooltipProps) => {
   const { label, content, position = 'top', delay = 300, maxWidth = 300, testId } = props;
 
   const [isVisible, setIsVisible] = useState(false);
+  const [tooltipId] = useState(() => createUID());
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const delayMs = typeof delay === 'string' ? parseInt(delay, 10) : delay;
@@ -74,16 +75,10 @@ export const PegaExtensionsTooltip = (props: TooltipProps) => {
       onFocus={handleFocus}
       onBlur={handleBlur}
     >
-      <TooltipTrigger tabIndex={0} role='button' aria-describedby='tooltip-content'>
+      <TooltipTrigger tabIndex={0} aria-describedby={tooltipId}>
         {label}
       </TooltipTrigger>
-      <TooltipContent
-        id='tooltip-content'
-        role='tooltip'
-        $position={position}
-        $maxWidth={maxWidthRem}
-        $visible={isVisible}
-      >
+      <TooltipContent id={tooltipId} role='tooltip' $position={position} $maxWidth={maxWidthRem} $visible={isVisible}>
         {content}
       </TooltipContent>
     </TooltipWrapper>

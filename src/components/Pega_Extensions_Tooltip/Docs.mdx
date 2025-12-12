@@ -1,4 +1,4 @@
-import { Meta, Story, Canvas, Controls } from '@storybook/blocks';
+import { Meta, Primary, Controls, Story } from '@storybook/addon-docs/blocks';
 import * as TooltipStories from './demo.stories';
 
 <Meta of={TooltipStories} />
@@ -21,11 +21,11 @@ The Tooltip component wraps a trigger element (typically text) and displays addi
 
 ### Basic Example
 
-<Canvas of={TooltipStories.Default} />
+<Primary />
 
 ## Properties
 
-<Controls of={TooltipStories.Default} />
+<Controls />
 
 ## Positioning
 
@@ -33,19 +33,19 @@ The tooltip can be positioned in four directions relative to the trigger element
 
 ### Top (Default)
 
-<Canvas of={TooltipStories.Default} />
+<Story name='Default' />
 
 ### Bottom
 
-<Canvas of={TooltipStories.BottomPosition} />
+<Story name='BottomPosition' />
 
 ### Left
 
-<Canvas of={TooltipStories.LeftPosition} />
+<Story name='LeftPosition' />
 
 ### Right
 
-<Canvas of={TooltipStories.RightPosition} />
+<Story name='RightPosition' />
 
 ## Content Handling
 
@@ -53,11 +53,11 @@ The tooltip handles various content lengths gracefully:
 
 ### Long Content
 
-<Canvas of={TooltipStories.LongContent} />
+<Story name='LongContent' />
 
 ### Custom Width
 
-<Canvas of={TooltipStories.CustomWidth} />
+<Story name='CustomWidth' />
 
 ## Interaction
 
@@ -65,7 +65,7 @@ The tooltip handles various content lengths gracefully:
 
 For immediate feedback, you can set the delay to 0:
 
-<Canvas of={TooltipStories.QuickShow} />
+<Story name='QuickShow' />
 
 ## Best Practices
 
