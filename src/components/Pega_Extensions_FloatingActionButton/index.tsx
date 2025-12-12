@@ -64,7 +64,6 @@ export const PegaExtensionsFloatingActionButton = (props: FloatingActionButtonPr
   const formattedMenuItems: MenuItemProps[] = menuItems.map((item) => ({
     id: item.id,
     primary: item.label,
-    onClick: handleMenuItemClick,
   }));
 
   return (
