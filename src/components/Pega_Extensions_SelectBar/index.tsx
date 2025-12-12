@@ -44,9 +44,10 @@ export const PegaExtensionsSelectBar = (props: SelectBarProps) => {
   const propName = pConn?.getStateProps()?.value;
 
   let { readOnly, required, disabled } = props;
-  [readOnly, required, disabled] = [readOnly, required, disabled].map(
-    (prop) => prop === true || (typeof prop === 'string' && prop === 'true'),
-  );
+  const toBooleanProp = (prop: any) => prop === true || (typeof prop === 'string' && prop === 'true');
+  readOnly = toBooleanProp(readOnly);
+  required = toBooleanProp(required);
+  disabled = toBooleanProp(disabled);
 
   const [selectedValue, setSelectedValue] = useState(value);
   const [status, setStatus] = useState<string>();
@@ -54,13 +55,8 @@ export const PegaExtensionsSelectBar = (props: SelectBarProps) => {
   useEffect(() => setSelectedValue(value), [value]);
 
   useEffect(() => {
-    if (validatemessage !== '') {
-      setStatus('error');
-    }
-    if (status !== 'success') {
-      setStatus(validatemessage !== '' ? 'error' : undefined);
-    }
-  }, [validatemessage, status]);
+    setStatus(validatemessage !== '' ? 'error' : undefined);
+  }, [validatemessage]);
 
   // Display mode - show only the selected value
   if (displayMode === 'DISPLAY_ONLY') {
